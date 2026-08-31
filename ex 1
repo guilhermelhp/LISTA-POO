@@ -1,0 +1,32 @@
+using System;
+
+class Retangulo
+{
+    public double Base { get; set; }
+    public double Altura { get; set; }
+
+    public double CalcularArea()
+    {
+        return Base * Altura;
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Retangulo retangulo = new Retangulo();
+
+        Console.Write("Digite a base do retângulo: ");
+        retangulo.Base = double.Parse(Console.ReadLine());
+
+        Console.Write("Digite a altura do retângulo: ");
+        retangulo.Altura = double.Parse(Console.ReadLine());
+
+        double area = retangulo.CalcularArea();
+
+        Console.WriteLine("Área do retângulo: " + area);
+
+        Console.ReadKey();
+    }
+}
