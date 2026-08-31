@@ -1,0 +1,39 @@
+using System;
+
+class Comparador
+{
+    public double ValorA { get; set; }
+    public double ValorB { get; set; }
+
+    public string Comparar()
+    {
+        if (ValorA > ValorB)
+        {
+            return "Maior valor: " + ValorA;
+        }
+        else if (ValorB > ValorA)
+        {
+            return "Maior valor: " + ValorB;
+        }
+        else
+        {
+            return "Os números são idênticos.";
+        }
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Comparador comparador = new Comparador();
+
+        Console.Write("Digite o primeiro valor: ");
+        comparador.ValorA = double.Parse(Console.ReadLine());
+
+        Console.Write("Digite o segundo valor: ");
+        comparador.ValorB = double.Parse(Console.ReadLine());
+
+        Console.WriteLine(comparador.Comparar());
+    }
+}
