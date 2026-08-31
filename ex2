@@ -1,0 +1,24 @@
+using System;
+
+class Quadrado
+{
+    public double Aresta { get; set; }
+
+    public double CalcularArea()
+    {
+        return Aresta * Aresta;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Quadrado quadrado = new Quadrado();
+
+        Console.Write("Digite a aresta do quadrado: ");
+        quadrado.Aresta = double.Parse(Console.ReadLine());
+
+        Console.WriteLine("Área do quadrado: " + quadrado.CalcularArea());
+    }
+}
