@@ -1,0 +1,25 @@
+using System;
+
+class ConversorDistancia
+{
+    public double Milhas { get; set; }
+
+    public double ConverterParaQuilometros()
+    {
+        return Milhas * 1.852;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        ConversorDistancia conversor = new ConversorDistancia();
+
+        Console.Write("Digite a quantidade de milhas marítimas: ");
+        conversor.Milhas = double.Parse(Console.ReadLine());
+
+        Console.WriteLine(
+            "Quilômetros: " + conversor.ConverterParaQuilometros());
+    }
+}
