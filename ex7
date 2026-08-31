@@ -1,0 +1,33 @@
+using System;
+
+class Comparador
+{
+    public double ValorA { get; set; }
+    public double ValorB { get; set; }
+
+    public double MaiorValor()
+    {
+        if (ValorA > ValorB)
+        {
+            return ValorA;
+        }
+
+        return ValorB;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Comparador comparador = new Comparador();
+
+        Console.Write("Digite o primeiro valor: ");
+        comparador.ValorA = double.Parse(Console.ReadLine());
+
+        Console.Write("Digite o segundo valor: ");
+        comparador.ValorB = double.Parse(Console.ReadLine());
+
+        Console.WriteLine("Maior valor: " + comparador.MaiorValor());
+    }
+}
