@@ -1,0 +1,30 @@
+using System;
+
+class ConversorMoeda
+{
+    public double Cotacao { get; set; }
+    public double Dolares { get; set; }
+
+    public double ConverterParaReais()
+    {
+        return Cotacao * Dolares;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        ConversorMoeda conversor = new ConversorMoeda();
+
+        Console.Write("Digite a cotação do dólar: ");
+        conversor.Cotacao = double.Parse(Console.ReadLine());
+
+        Console.Write("Digite a quantidade de dólares: ");
+        conversor.Dolares = double.Parse(Console.ReadLine());
+
+        double reais = conversor.ConverterParaReais();
+
+        Console.WriteLine("Valor em reais: R$ " + reais);
+    }
+}
