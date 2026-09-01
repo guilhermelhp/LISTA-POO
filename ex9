@@ -1,0 +1,41 @@
+using System;
+
+class Terreno
+{
+    public double Base { get; set; }
+    public double Altura { get; set; }
+
+    public double CalcularArea()
+    {
+        return Base * Altura;
+    }
+
+    public string ClassificarTerreno()
+    {
+        if (CalcularArea() > 100)
+        {
+            return "Terreno grande";
+        }
+        else
+        {
+            return "Terreno pequeno";
+        }
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Terreno terreno = new Terreno();
+
+        Console.Write("Digite a base do terreno: ");
+        terreno.Base = double.Parse(Console.ReadLine());
+
+        Console.Write("Digite a altura do terreno: ");
+        terreno.Altura = double.Parse(Console.ReadLine());
+
+        Console.WriteLine("Área: " + terreno.CalcularArea());
+        Console.WriteLine(terreno.ClassificarTerreno());
+    }
+}
